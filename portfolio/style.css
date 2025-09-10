@@ -1,0 +1,31 @@
+/* Custom styles not supported by Tailwind */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F5F5; /* A light, off-white background */
+    color: #333333; /* A dark gray for main text */
+    overflow-x: hidden; /* Prevents horizontal scroll on animations */
+    scroll-behavior: smooth;
+}
+
+/* Specific styles for the hero section background */
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Puts the canvas behind the text */
+    opacity: 0.1;
+}
+
+/* Utility class to fade-in elements */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
